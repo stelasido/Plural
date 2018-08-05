@@ -6,8 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\ts\main.ts" />
-    <Content Remove="wwwroot\ts\storecustomer.ts" />
+    <Compile Remove="wwwroot\ts\**" />
+    <Content Remove="wwwroot\ts\**" />
+    <EmbeddedResource Remove="wwwroot\ts\**" />
+    <None Remove="wwwroot\ts\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +29,5 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="wwwroot\ts\main.ts" />
-    <TypeScriptCompile Include="wwwroot\ts\storecustomer.ts" />
   </ItemGroup>
 </Project>
