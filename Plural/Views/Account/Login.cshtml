@@ -1,0 +1,22 @@
+﻿
+@model LoginViewModel
+@{
+    
+}
+
+<p>P@ssw0rd!</p>
+<form action="" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label asp-for="Username">Username</label>
+    <input asp-for="Username" />
+    <span asp-validation-for="Username"></span>
+    <label asp-for="Password">Password</label>
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+
+    <label asp-for="RememberMe">Remember me</label>
+    <input asp-for="RememberMe" type="checkbox" />
+    <span asp-validation-for="RememberMe"></span>
+
+    <input type="submit" name="name" value="Login" />
+</form>

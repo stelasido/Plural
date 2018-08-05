@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="~/lib/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    <ul>
+        <li><a asp-controller="App" asp-action="About">About</a></li>
+        <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+        }
+        else
+        {
+            <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+
+        }
+    </ul>
+    @RenderBody()
+    <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/index.js"></script>
+    @RenderSection("scripts", false) <!--FALSE NOT REQUIRED NOT EVERY PAGE-->
+</body>
+</html>

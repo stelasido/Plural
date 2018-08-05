@@ -1,0 +1,16 @@
+{
+  "ConnectionStrings": {
+    "PluralConnectionString": "server=(localdb)\\ProjectsV13;Database=PluralDb;Integrated Security=true;MultipleActiveResultSets=true"
+  },
+  "Login": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  },
+  "Tokens": {
+    "Key": "ghjgh jh jghjhgjytu56 u rty juf jhgjghjgh",
+    "Issuer": "localhost",
+    "Audience":  "users"
+  }
+}
